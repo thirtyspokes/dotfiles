@@ -9,7 +9,7 @@
     enable = true;
     keyMode = "vi";
     escapeTime = 0;
-    
+
     extraConfig = ''
       set-option -g prefix C-a
       unbind-key C-a
@@ -24,7 +24,7 @@
       bind-key space next-window
       bind-key bspace previous-window
       bind-key enter next-layout
-      
+
       bind-key v split-window -h -c "#{pane_current_path}"
       bind-key s split-window -v -c "#{pane_current_path}"
       bind-key h select-pane -L
@@ -54,11 +54,14 @@
       bind-key -T copy-mode-vi y send-keys -X copy-pipe "reattach-to-user-namespace pbcopy"
       unbind -T copy-mode-vi Enter
       bind-key -T copy-mode-vi Enter send-keys -X copy-pipe "reattach-to-user-namespace pbcopy"
-      bind ] run "reattach-to-user-namespace pbpaste | tmux load-buffer - && tmux paste-buffer"      
+      bind ] run "reattach-to-user-namespace pbpaste | tmux load-buffer - && tmux paste-buffer"
 
       bind-key -T root WheelUpPane if-shell -F -t = "#{alternate_on}" "send-keys -M" "select-pane -t =; copy-mode -e; send-keys -M"
       bind-key -T root WheelDownPane if-shell -F -t = "#{alternate_on}" "send-keys -M" "select-pane -t =; send-keys -M"
       set-option -g assume-paste-time 0
+
+      set-option -g status-bg colour15
+      set-option -g status-right "%d %b %Y | %l:%M %p "
     '';
   };
-} 
+}

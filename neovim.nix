@@ -10,6 +10,8 @@
       vim-indent-guides
       syntastic
       vim-fugitive
+      vim-better-whitespace
+      vim-go
     ];
 
     extraConfig = ''
@@ -80,6 +82,10 @@
       endif
 
       vnoremap p "_dP 
+
+      let g:go_fmt_command = "gofmt"
+
+      nnoremap <leader><space> :StripWhitespace<CR>
     '';
   };
 }
