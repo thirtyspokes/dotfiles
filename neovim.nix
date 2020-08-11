@@ -12,6 +12,7 @@
       vim-fugitive
       vim-better-whitespace
       vim-go
+      vim-colors-solarized
     ];
 
     extraConfig = ''
@@ -19,13 +20,18 @@
 
       syntax enable
 
+      let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+
+      set background=light
+      colorscheme solarized
+
       filetype on
       filetype off
 
       filetype plugin indent on
 
       set autoindent
-      set autoread 
+      set autoread
       set backspace=2
       set backupcopy=yes
       set clipboard=unnamed
@@ -66,7 +72,7 @@
       let g:gitgutter_enabled = 0
 
       if executable('rg')
-        let g:ctrlp_user_command = 'rg %s --smart-case --files --color=never --glob ""'	
+        let g:ctrlp_user_command = 'rg %s --smart-case --files --color=never --glob ""'
       endif
 
       autocmd BufRead,BufNewFile *.fdoc set filetype=yaml
@@ -81,7 +87,7 @@
         let &t_EI = "\<Esc>]50;CursorShape=0\x7"
       endif
 
-      vnoremap p "_dP 
+      vnoremap p "_dP
 
       let g:go_fmt_command = "gofmt"
 
