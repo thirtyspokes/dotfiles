@@ -61,6 +61,7 @@
       set-option -g assume-paste-time 0
 
       set-option -g status-bg colour15
+      set-option -g status-left ""
       set-option -g status-right "%d %b %Y | %l:%M %p "
     '';
   };
