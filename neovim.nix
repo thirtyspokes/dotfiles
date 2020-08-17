@@ -6,12 +6,25 @@
     vimAlias = true;
 
     plugins = with pkgs.vimPlugins; [
+      # Fuzzy file-finder
       ctrlp
+
+      # Helps get indentation right
       vim-indent-guides
+
+      # Base plugin for most lang packages
       syntastic
+
+      # Git + Vim
       vim-fugitive
+
+      # Utilities for showing/removing whitespace
       vim-better-whitespace
+
+      # Go language features
       vim-go
+
+      # An ergonomic color scheme
       vim-colors-solarized
     ];
 

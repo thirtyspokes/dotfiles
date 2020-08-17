@@ -2,6 +2,8 @@
 
 {
   home.packages = with pkgs; [
+      # A utility that lets native copy/paste
+      # work within tmux on MacOS.
       reattach-to-user-namespace
   ];
 
