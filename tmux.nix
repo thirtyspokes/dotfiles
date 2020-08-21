@@ -62,7 +62,7 @@
       bind-key -T root WheelDownPane if-shell -F -t = "#{alternate_on}" "send-keys -M" "select-pane -t =; send-keys -M"
       set-option -g assume-paste-time 0
 
-      set-option -g status-bg colour15
+      set-option -g status-bg colour14
       set-option -g status-left ""
       set-option -g status-right "%d %b %Y | %l:%M %p "
     '';

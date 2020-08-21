@@ -24,8 +24,11 @@
       # Go language features
       vim-go
 
+      # Syntax for protobufs
+      vim-protobuf
+
       # An ergonomic color scheme
-      vim-colors-solarized
+      nord-vim
     ];
 
     extraConfig = ''
@@ -35,8 +38,7 @@
 
       let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
-      set background=light
-      colorscheme solarized
+      colorscheme nord
 
       filetype on
       filetype off
@@ -54,8 +56,6 @@
       set ignorecase
       set incsearch
       set laststatus=2
-      set list
-      set listchars=tab:▸\ ,trail:▫
       set number
       set ruler
       set scrolloff=3
@@ -102,8 +102,9 @@
 
       vnoremap p "_dP
 
-      let g:go_fmt_command = "gofmt"
+      let g:go_fmt_command = "goimports"
 
+      let g:better_whitespace_enabled=1
       nnoremap <leader><space> :StripWhitespace<CR>
     '';
   };

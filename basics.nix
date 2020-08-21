@@ -7,7 +7,7 @@
 
     initExtra = ''
       source ~/.nix-profile/etc/profile.d/nix.sh
-      export PROMPT="%B%F{magenta}%n@%m%f [%F{blue}%~%f]%b ⚡  "
+      export PROMPT="%B%F{magenta}%n@%m%f [%F{blue}%~%f]%b "
       export PATH="$PATH:$(go env GOPATH)/bin"
     '';
   };
