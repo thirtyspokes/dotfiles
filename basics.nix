@@ -16,9 +16,6 @@
     # Fast searchin'
     ripgrep
 
-    # A nice monospaced font
-    fira-code
-
     # An ergonomic HTTP client
     httpie
   ];

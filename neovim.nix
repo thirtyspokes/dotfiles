@@ -102,7 +102,7 @@
 
       vnoremap p "_dP
 
-      let g:go_fmt_command = "goimports"
+      let g:go_fmt_command = "gofumports"
 
       let g:better_whitespace_enabled=1
       nnoremap <leader><space> :StripWhitespace<CR>
