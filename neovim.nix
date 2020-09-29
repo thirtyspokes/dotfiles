@@ -24,10 +24,13 @@
       # Go language features
       vim-go
 
+      # Elixir language features
+      vim-elixir
+
       # Syntax for protobufs
       vim-protobuf
 
-      # An ergonomic color scheme
+      # Nord theme
       nord-vim
     ];
 
@@ -64,7 +67,7 @@
       set smartcase
       set softtabstop=2
       set tabstop=8
-      set wildignore=log/**,node_modules/**,target/**,tmp/**,*.rbc
+      set wildignore=_build/**,log/**,node_modules/**,target/**,tmp/**,*.rbc
       set wildmenu
       set wildmode=longest,list,full
       set mouse=a
@@ -85,7 +88,7 @@
       let g:gitgutter_enabled = 0
 
       if executable('rg')
-        let g:ctrlp_user_command = 'rg %s --smart-case --files --color=never --glob ""'
+        let g:ctrlp_user_command = 'rg %s --smart-case --no-require-git --files --color=never --glob ""'
       endif
 
       autocmd BufRead,BufNewFile *.fdoc set filetype=yaml
